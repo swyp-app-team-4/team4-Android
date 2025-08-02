@@ -59,6 +59,9 @@ dependencies {
     //KaKao APi
     implementation("com.kakao.sdk:v2-user:2.21.0")  // 카카오톡 사용자 정보 API 모듈
 
+    // 네이버 sdk
+    implementation("com.navercorp.nid:oauth:5.10.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
