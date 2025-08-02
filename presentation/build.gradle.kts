@@ -2,14 +2,18 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
-    namespace = "com.example.swift"
+    namespace = "com.boombim.android"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.swift"
+        applicationId = "com.boombim.android"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -47,6 +51,16 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.6")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.6")
     implementation("androidx.fragment:fragment:1.8.0")
+
+    //Hilt
+    implementation(libs.hilt)
+    ksp(libs.hilt.compiler)
+
+    //KaKao APi
+    implementation("com.kakao.sdk:v2-user:2.21.0")  // 카카오톡 사용자 정보 API 모듈
+
+    // 네이버 sdk
+    implementation("com.navercorp.nid:oauth:5.10.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
