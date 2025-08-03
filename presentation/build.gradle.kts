@@ -4,8 +4,8 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
-    alias(libs.plugins.ksp)
     alias(libs.plugins.google.gms.google.services)
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -54,7 +54,7 @@ dependencies {
 
     //Hilt
     implementation(libs.hilt)
-    ksp(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
 
     //KaKao APi
     implementation("com.kakao.sdk:v2-user:2.21.0")  // 카카오톡 사용자 정보 API 모듈
