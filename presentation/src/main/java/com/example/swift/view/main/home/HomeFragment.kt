@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import com.boombim.android.R
 import com.boombim.android.databinding.FragmentHomeBinding
+import com.example.domain.model.PlaceLessBoomBimModel
 import com.example.domain.model.RegionNewsModel
+import com.example.swift.view.main.home.adapter.PlaceLessBoomBimAdapter
 import com.example.swift.view.main.home.adapter.RegionNewsAdapter
 
 class HomeFragment : Fragment() {
@@ -28,6 +31,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initRegionNewsViewPager()
+
+        initLessBoomBimPlace()
+
     }
 
     private fun initRegionNewsViewPager() = with(binding) {
@@ -44,6 +50,22 @@ class HomeFragment : Fragment() {
         dotsIndicator.setDotIndicatorColor(
             ContextCompat.getColor(requireContext(), R.color.gray_scale_9)
         )
+    }
+
+    private fun initLessBoomBimPlace() = with((binding)){
+        val placeList = listOf(
+            PlaceLessBoomBimModel("노들섬", "14분 전", "congestion"),    // 혼잡
+            PlaceLessBoomBimModel("시청 광장", "20분 전", "normal"),      // 보통
+            PlaceLessBoomBimModel("뚝섬 유원지", "5분 전", "relaxed"),     // 여유
+            PlaceLessBoomBimModel("여의도 한강공원", "1시간 전", "congestion"),
+            PlaceLessBoomBimModel("경복궁", "30분 전", "normal"),
+            PlaceLessBoomBimModel("남산서울타워", "25분 전", "relaxed")
+        )
+
+        val adapter = PlaceLessBoomBimAdapter(placeList)
+        val layoutManager = GridLayoutManager(requireContext(), 2, GridLayoutManager.HORIZONTAL, false)
+        recyclerLessBoomBim.layoutManager = layoutManager
+        recyclerLessBoomBim.adapter = adapter
     }
 
     override fun onDestroyView() {
