@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/image_place"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/image_place1"
+        android:background="@drawable/bg_rounded"
+        android:clipToOutline="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icon_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_rank1"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <LinearLayout
+        android:id="@+id/place_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/image_place"
+        app:layout_constraintTop_toTopOf="@id/image_place">
+
+        <TextView
+            android:id="@+id/text_place_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="서울 강남구"
+            android:textSize="12sp"
+            android:textColor="@color/gray_scale_8"
+            android:fontFamily="@font/pretend_regular" />
+
+        <TextView
+            android:id="@+id/text_place_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="강남역 2번 출구"
+            android:textSize="16sp"
+            android:textColor="@color/gray_scale_10"
+            android:fontFamily="@font/pretend_semibold"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icon_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:src="@drawable/icon_status_congestion"
+        app:layout_constraintStart_toStartOf="@id/place_container"
+        app:layout_constraintBottom_toBottomOf="@id/image_place"/>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="14 분전"
+        android:textSize="12sp"
+        android:textColor="@color/gray_scale_7"
+        android:fontFamily="@font/pretend_regular"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

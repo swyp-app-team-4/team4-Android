@@ -7,12 +7,15 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.boombim.android.R
 import com.boombim.android.databinding.FragmentHomeBinding
 import com.example.domain.model.InterestsPlaceModel
+import com.example.domain.model.PlaceBoomBimModel
 import com.example.domain.model.PlaceLessBoomBimModel
 import com.example.domain.model.RegionNewsModel
 import com.example.swift.view.main.home.adapter.InterestsPlaceAdapter
+import com.example.swift.view.main.home.adapter.PlaceBoomBimAdapter
 import com.example.swift.view.main.home.adapter.PlaceLessBoomBimAdapter
 import com.example.swift.view.main.home.adapter.RegionNewsAdapter
 
@@ -37,6 +40,8 @@ class HomeFragment : Fragment() {
         initLessBoomBimPlace()
 
         initInterestsPlace()
+
+        initPlaceBoomBimList()
 
     }
 
@@ -82,6 +87,20 @@ class HomeFragment : Fragment() {
         val adapter = InterestsPlaceAdapter(interestsList)
         recyclerInterestPlace.layoutManager = GridLayoutManager(requireContext(), 1, GridLayoutManager.HORIZONTAL, false) // 세로형
         recyclerInterestPlace.adapter = adapter
+    }
+
+    private fun initPlaceBoomBimList() = with(binding) {
+        val items = listOf(
+            PlaceBoomBimModel("시청 광장", "강남역 1번출구", 2,"congestion", "14분전"),
+            PlaceBoomBimModel("경복궁", "강남역 1번출구", 1,"normal", "14분전"),
+            PlaceBoomBimModel("한강 공원", "강남역 1번출구", 3,"congestion", "14분전"),
+            PlaceBoomBimModel("시청 광장", "강남역 1번출구", 4,"congestion", "14분전"),
+            PlaceBoomBimModel("경복궁", "강남역 1번출구", 5,"normal", "14분전"),
+        )
+        val list = items.sortedBy { it.ranking }
+
+        recyclerBoomBim.layoutManager = LinearLayoutManager(requireContext())
+        recyclerBoomBim.adapter = PlaceBoomBimAdapter(list)
     }
 
     override fun onDestroyView() {
