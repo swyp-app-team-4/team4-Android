@@ -1,6 +1,7 @@
 package com.example.swift.view
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -30,7 +31,22 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHostFragment.navController
         binding.navBar.setupWithNavController(navController)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+                R.id.homeFragment,
+                R.id.mapFragment,
+                R.id.chattingFragment,
+                R.id.myPageFragment -> {
+                    binding.navBar.visibility = View.VISIBLE
+                }
+                else -> {
+                    binding.navBar.visibility = View.GONE
+                }
+            }
+        }
     }
+
 
     private fun bottomNavigate(){
         binding.navBar.setOnItemSelectedListener { menuItem ->

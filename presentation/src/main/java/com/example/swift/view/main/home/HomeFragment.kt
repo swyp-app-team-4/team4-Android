@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.boombim.android.R
@@ -42,6 +43,10 @@ class HomeFragment : Fragment() {
         initInterestsPlace()
 
         initPlaceBoomBimList()
+
+        binding.iconAlert.setOnClickListener {
+            findNavController().navigate(R.id.notificationFragment)
+        }
 
     }
 

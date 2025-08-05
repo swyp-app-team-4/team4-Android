@@ -12,6 +12,15 @@
         android:paddingBottom="16dp">
 
         <ImageView
+            android:id="@+id/icon_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_alert"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
             android:id="@+id/icon_broadcast"
             android:layout_width="25dp"
             android:layout_height="25dp"

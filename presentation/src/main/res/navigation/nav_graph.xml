@@ -20,6 +20,10 @@
         android:id="@+id/myPageFragment"
         android:name="com.example.swift.view.main.MyPageFragment"
         android:label="MyPageFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.swift.view.main.notification.NotificationFragment"
+        android:label="NotificationFragment" />
 
 
 </navigation>
