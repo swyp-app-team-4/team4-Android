@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/image_place"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_place_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="노들섬"
+        android:textSize="16sp"
+        android:textColor="@color/gray_scale_10"
+        android:fontFamily="@font/pretend_semibold"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_place"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="오늘 15명 업데이트"
+        android:textSize="12sp"
+        android:textColor="@color/gray_scale_8"
+        android:fontFamily="@font/pretend_regular"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_place_name"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/icon_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_status_congestion"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_update"/>
+
+    <ImageView
+        android:id="@+id/icon_star"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/icon_star"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
