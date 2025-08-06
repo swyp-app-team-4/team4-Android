@@ -30,6 +30,18 @@ class EventTabFragment : Fragment() {
 
         initEventNotification()
 
+        with(binding){
+            textNotice.setOnClickListener {
+                binding.textNotice.isSelected = true
+                binding.textEvent.isSelected = false
+            }
+
+            textEvent.setOnClickListener {
+                binding.textNotice.isSelected = false
+                binding.textEvent.isSelected = true
+            }
+        }
+
     }
 
     private fun initEventNotification() = with(binding){
