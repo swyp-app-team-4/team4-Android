@@ -10,22 +10,22 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/image_place1"
         android:background="@drawable/bg_rounded"
         android:clipToOutline="true"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/icon_rank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
         android:src="@drawable/icon_rank1"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -74,7 +74,7 @@
         android:textSize="12sp"
         android:textColor="@color/gray_scale_7"
         android:fontFamily="@font/pretend_regular"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="19dp"
         android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
