@@ -19,7 +19,9 @@ import com.example.swift.view.main.home.adapter.InterestsPlaceAdapter
 import com.example.swift.view.main.home.adapter.PlaceBoomBimAdapter
 import com.example.swift.view.main.home.adapter.PlaceLessBoomBimAdapter
 import com.example.swift.view.main.home.adapter.RegionNewsAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!

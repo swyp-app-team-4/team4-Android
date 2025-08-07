@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
+    id ("kotlin-kapt")
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -33,6 +36,11 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+    api(libs.kotlinx.serialization.json)
+    api(libs.coroutine)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

@@ -10,7 +10,9 @@ import androidx.navigation.navOptions
 import com.boombim.android.R
 import com.boombim.android.databinding.FragmentNotificationBinding
 import com.google.android.material.tabs.TabLayout
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NotificationFragment : Fragment() {
     private var _binding: FragmentNotificationBinding? = null
     private val binding get() = _binding!!
