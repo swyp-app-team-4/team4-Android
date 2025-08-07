@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.boombim.android.databinding.FragmentChattingBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ChattingFragment : Fragment() {
     private var _binding: FragmentChattingBinding? = null
     private val binding get() = _binding!!

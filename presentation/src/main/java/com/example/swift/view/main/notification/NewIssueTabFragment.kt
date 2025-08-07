@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.boombim.android.databinding.FragmentNewIssueTabBinding
 import com.boombim.android.databinding.FragmentNotificationBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NewIssueTabFragment : Fragment() {
     private var _binding: FragmentNewIssueTabBinding? = null
     private val binding get() = _binding!!

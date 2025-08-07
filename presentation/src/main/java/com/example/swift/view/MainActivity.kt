@@ -17,8 +17,10 @@ import androidx.navigation.ui.setupWithNavController
 import com.boombim.android.R
 import com.boombim.android.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 import java.security.MessageDigest
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
