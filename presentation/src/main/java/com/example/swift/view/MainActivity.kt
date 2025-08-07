@@ -1,6 +1,11 @@
 package com.example.swift.view
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.util.Base64
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
@@ -12,6 +17,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.boombim.android.R
 import com.boombim.android.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import java.security.MessageDigest
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -24,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         initNavigation()
 
         bottomNavigate()
-
 
     }
     private fun initNavigation() {
