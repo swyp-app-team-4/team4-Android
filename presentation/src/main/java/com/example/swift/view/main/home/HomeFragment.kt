@@ -50,6 +50,10 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.notificationFragment)
         }
 
+        binding.iconSearch.setOnClickListener {
+            findNavController().navigate(R.id.searchFragment)
+        }
+
     }
 
     private fun initRegionNewsViewPager() = with(binding) {
