@@ -29,7 +29,6 @@
         android:textColor="@color/gray_scale_10"
         android:fontFamily="@font/pretend_semibold"
         android:layout_marginTop="2dp"
-        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_place"
         tools:ignore="MissingConstraints" />
@@ -42,7 +41,6 @@
         android:textSize="12sp"
         android:textColor="@color/gray_scale_8"
         android:fontFamily="@font/pretend_regular"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_place_name"
@@ -53,7 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/icon_status_congestion"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/text_update"/>
